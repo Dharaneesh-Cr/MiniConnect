@@ -1,0 +1,10 @@
+import express from 'express';
+import { protect } from '../middleware/authMiddleware.js';
+import { getMe, getUsers, getProfile, updateProfile, followUser } from '../controllers/userController.js';
+const router = express.Router();
+router.get('/me', protect, getMe);
+router.get('/', protect, getUsers);
+router.get('/:id', protect, getProfile);
+router.put('/me', protect, updateProfile);
+router.post('/:id/follow', protect, followUser);
+export default router;
