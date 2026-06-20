@@ -439,3 +439,30 @@ textarea {
     text-align: center;
   }
 }
+@media (max-width: 600px) {
+  .layout {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+
+  .sidebar,
+  .right {
+    display: none !important;
+  }
+
+  .navbar {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    padding: 10px !important;
+  }
+
+  .search {
+    display: none !important;
+  }
+
+  .card {
+    width: 100% !important;
+  }
+}
